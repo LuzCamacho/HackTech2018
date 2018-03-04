@@ -5,6 +5,7 @@ import cv2
 
 image_name = "capture.jpg"
 keypress = "q";
+data_filename = "data.csv"
 
 # Captures image from webcam on "q" keypress
 def take_image(filename, keypress):
@@ -48,13 +49,12 @@ for region in analysis["regions"]:
             print(word["text"], end=" ")
         print()
 
-with open('out.txt', 'a') as file:
+open(data_filename, 'w').close()
+
+with open(data_filename, 'a') as file:
     for region in analysis["regions"]:
         for line in region["lines"]:
             for word in line["words"]:
                 
                 file.write(word["text"])
                 file.write(",")
-
-
-

@@ -1,7 +1,11 @@
 # HackTech2018
 ### E., L., H., T.
+### A personal assistant developed at HackTech 2018 at Caltech.
 
-### Installations
-'''python3 -m pip install opencv-python'''
+### Install OpenCV
+python3 -m pip install opencv-python
 
-'''python3 image_ocr.py'''
+### Run Script
+python3 image_ocr.py
+
+### More features coming soon
